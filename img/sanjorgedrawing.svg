@@ -29,11 +29,11 @@
      showgrid="false"
      inkscape:zoom="0.59027282"
      inkscape:cx="443.86255"
-     inkscape:cy="379.48554"
+     inkscape:cy="378.63847"
      inkscape:window-width="1440"
-     inkscape:window-height="900"
+     inkscape:window-height="801"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -62,8 +62,8 @@
        y="15.008259"
        clip-path="url(#clipPath934)"
        inkscape:export-filename="/Users/u0110910/workspace/wedding-website/img/sanjorgedrawing.png"
-       inkscape:export-xdpi="1590.1899"
-       inkscape:export-ydpi="1590.1899"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
        transform="matrix(0.80633113,0,0,0.80043703,16.442565,26.669864)" />
   </g>
 </svg>
