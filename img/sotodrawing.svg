@@ -49,11 +49,11 @@
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath364">
+       id="clipPath133">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 57.25991,225.56711 c 52.69521,8.30373 104.24498,22.11418 157.23533,-4.57588 C 268.05679,186.67352 258.19231,103.51419 194.60388,77.977742 82.434768,11.310077 -75.176663,163.7986 57.25991,225.56711 Z"
-         id="path366"
+         d="M 57.259909,225.56711 C 109.95512,233.87084 161.50489,247.68129 214.49524,220.99123 268.05679,186.67352 258.19231,103.51419 194.60388,77.977741 82.434767,11.310079 -75.176664,163.7986 57.259909,225.56711 Z"
+         id="path135"
          sodipodi:nodetypes="cccc" />
     </clipPath>
   </defs>
@@ -69,10 +69,10 @@
        id="image104"
        x="0.49610269"
        y="55.314732"
-       clip-path="url(#clipPath364)"
+       clip-path="url(#clipPath133)"
        inkscape:export-filename="/Users/u0110910/workspace/wedding-website/img/sotodrawing.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
-       transform="matrix(0.80496708,0.00360612,-0.00376179,0.77165742,-0.67720288,28.48289)" />
+       transform="matrix(0.80496708,0.00360612,-0.00376179,0.77165742,0.51510918,17.752081)" />
   </g>
 </svg>
