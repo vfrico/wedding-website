@@ -24,6 +24,9 @@
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="img/logowedding.svg" color="#5bbad5">
 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+
     <script>
         // load css files from CDN if local node_modules fail
         function loadCssFromCDN(css) {
@@ -78,7 +81,7 @@
                             <li><a href="#eng-fotos">Fotos</a></li>
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#rsvp" class="btn-white btn-small" onclick="window.location.href = '#rsvp'; return false;">RSVP</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small" onclick="window.location.href = '#rsvp'; return false;">SRC</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -128,7 +131,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
                     <p><strong>11 Octubre</strong></p>
-                    <h5> <em>20:00</em> &nbsp; - &nbsp;Eucaristía en la parroquia <a href="https://maps.app.goo.gl/yVm2ocLQGMnWNb6KA">San Gregorio Magno</a></h5>
+                    <h5> <em>20:00</em> &nbsp; - &nbsp; Eucaristía en la parroquia <a href="https://maps.app.goo.gl/yVm2ocLQGMnWNb6KA">San Gregorio Magno</a></h5>
                     <p>
                         Celebraremos la Eucaristía con la comunidad parroquial
                     </p>
@@ -165,7 +168,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3 class="header" style="padding-bottom: 0;">Real Colegiata de San Isidro<br>
-                    <p><span style="font-size: 11px;"><em>C. Toledo, 37</p></em></span>
+                    <p><span style="font-size: 11px;"><em>C. Toledo, 37</em></span></p>
                 </h3>
             </div>
             <div class="col-md-7 text-center"><img src="img/sanjorgedrawing.png" style="max-width: 60%; height: auto;" class="wp1"></div>
@@ -176,8 +179,11 @@
                     Nuestra historia personal se entrelaza con este espacio haciendo que nuestra boda adquiera un significado aún más especial. 
                 </p>
                 <p align="center">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.8679627119986!2d-3.6878607241104926!3d40.45605927143328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42291e6095a79b%3A0xf9b7a6160f3af988!2sParroquia%20de%20San%20Jorge!5e0!3m2!1sen!2sbe!4v1697999513489!5m2!1sen!2sbe" 
-                    frameborder="0" marginheight="0" marginwidth="0" style="height: 60%; width: 60%;">Loading…</iframe>
+                    <div id="map_church" style="width: 70%; height: 250px; margin: 0 auto;" ></div>
+<!--                    <iframe -->
+<!--                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.8149317670627!2d-3.709819323423858!3d40.41295045586843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227d57dabbf29%3A0xdac37804ea396758!2sRoyal%20Congregation%20of%20San%20Isidro%20of%20Madrid!5e0!3m2!1sen!2sbe!4v1717798918079!5m2!1sen!2sbe"-->
+<!--                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">-->
+<!--                    </iframe>-->
                  </p>
             </div>
         </div>
@@ -188,8 +194,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header" style="padding-bottom: 0;">El Soto de Mónico<br>
-                    <p><span style="font-size: 11px;"><em>C. del Casino, Los Santos de la Humosa</p></em></span>
+                <h3 class="header" style="padding-bottom: 0;">Restaurante San Francisco<br>
+                    <p><span style="font-size: 11px;"><em>Pista del Cristo de El Pardo 3, Fuencarral - El Pardo</em></span></p>
                 </h3>
             </div>
             <div class="col-md-7 text-center"><img src="img/sotodrawing.png" style="max-width: 80%; height: auto;" class="wp2"></div>
@@ -201,8 +207,14 @@
                     Cuenta con unas impresionantes vistas a un extenso campo de pistachos y un bonito estanque llamado El Marjal.
                 </p>
                 <p align="center">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.4359167060197!2d-3.3049409239471443!3d40.50985504996617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424e069b9169dd%3A0x5ef54ed96aa08d65!2sEl%20Soto%20de%20Monico!5e0!3m2!1sen!2ses!4v1698610080317!5m2!1sen!2ses"
-                    frameborder="0" marginheight="0" marginwidth="0" style="height: 60%; width: 60%;">Loading…</iframe>
+                    <div id="map_restaurant" style="width: 70%; height: 250px; margin: 0 auto;" ></div>
+<!--                    <iframe  class="embed-responsive-item"-->
+<!--                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.9716230149897!2d-3.7813086000000005!3d40.5201183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41811c58734c45%3A0x74b4c11710d6d36b!2sRestaurante%20San%20Francisco!5e0!3m2!1ses!2ses!4v1717798712876!5m2!1ses!2ses"-->
+<!--                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">-->
+<!--                        Loading...-->
+<!--                    </iframe>-->
+<!--                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.4359167060197!2d-3.3049409239471443!3d40.50985504996617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424e069b9169dd%3A0x5ef54ed96aa08d65!2sEl%20Soto%20de%20Monico!5e0!3m2!1sen!2ses!4v1698610080317!5m2!1sen!2ses"-->
+<!--                    frameborder="0" marginheight="0" marginwidth="0" style="height: 60%; width: 60%;">Loading…</iframe>-->
                 </p>
             </div>
         </div>
@@ -214,10 +226,10 @@
 </section>
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
-        data-property="{videoURL:'https://youtu.be/sUxC9_slazM?si=BnDyTLFT6aMkh_od',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:0, stopAt:10, opacity:1, style:'background-position: bottom;'}">
+        data-property="{videoURL:'https://www.youtube.com/watch?v=KHztL3f5lik',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:9, stopAt:24, opacity:1, style:'background-position: bottom;'}">
     </div>
     <div id="video-content">
-        <h5>El Soto de Mónico</h5>
+        <h5>Real Colegiata de San Isidro</h5>
     </div>
 </section>
 
@@ -239,83 +251,6 @@
     </div>
 </section>
 
-<section id="eng-fotos" class="section-padding">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Fotos</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/img1.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/img1.jpg" alt="" style="max-width: 100%; height: auto;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/img4.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/img4.jpg" alt="" style="max-width: 100%; height: auto;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/img3.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/img3.jpg" alt="" style="max-width: 100%; height: auto;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/img7.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/img7.jpg" alt="" style="max-width: 100%; height: auto;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/img9.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/img9.jpg" alt="" style="max-width: 100%; height: auto;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/img8.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/img8.jpg" alt="" style="max-width: 100%; height: auto;">
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
-</section>
-
 
 <section id="comparteFotos" class="section">
     <div class="container">
@@ -333,16 +268,16 @@
     </div>
 </section>
 
-<section class="rsvp text-center" id="rsvp">
+<section class="rsvp text-center" id="rsvp" style=" background-color: #f6f6f6">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="header">RSVP</h3>
+                <h3 class="header">SRC</h3>
             </div>
         </div>
-    <div class="embed-responsive embed-responsive-4by3" style="height: 100vh;">
-        <iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSfU-2yQN_Wj_RCeQPjRdudWfzuKoGq5C8fuWSze2onSVhm6ow/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" style="height: 100%;">Loading…</iframe>
-    </div>
+        <div class="embed-responsive embed-responsive-4by3" style="height: 2000px;">
+            <iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLScXqCLdZ4lM8444WMd5kcUN7WXUOh5FkhL2A-g57JMr5aQpOQ/viewform?usp=sf_link" frameborder="0" marginheight="0" marginwidth="0" style="height: 100%;">Loading…</iframe>
+        </div>
         <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfU-2yQN_Wj_RCeQPjRdudWfzuKoGq5C8fuWSze2onSVhm6ow/viewform?embedded=true" width="400" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
     </div>
 </section>
@@ -353,9 +288,9 @@
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
                 <p>
-                    <strong>ANA & JAVI</strong>
+                    <strong>ORISTILA & VÍCTOR</strong>
                     <br>
-                    617429754 | 636671062
+                    603422923 | 679982751
                 </p>
             </div>
         </div>
@@ -372,20 +307,73 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->
+<!--<script>-->
+<!--    (function (i, s, o, g, r, a, m) {-->
+<!--        i['GoogleAnalyticsObject'] = r;-->
+<!--        i[r] = i[r] || function () {-->
+<!--            (i[r].q = i[r].q || []).push(arguments)-->
+<!--        }, i[r].l = 1 * new Date();-->
+<!--        a = s.createElement(o),-->
+<!--            m = s.getElementsByTagName(o)[0];-->
+<!--        a.async = 1;-->
+<!--        a.src = g;-->
+<!--        m.parentNode.insertBefore(a, m)-->
+<!--    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');-->
+<!--    ga('create', 'UA-46465113-4', 'auto');-->
+<!--    ga('send', 'pageview');-->
+<!--</script>-->
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-46465113-4', 'auto');
-    ga('send', 'pageview');
+  mapboxgl.accessToken = 'pk.eyJ1IjoidmZyaWNvIiwiYSI6ImNqcTV0Zjl4aDIxbWEzeHBwZ28wc29yNTEifQ.6w494eJOyfIE09VtDG9yhg';
+  const map_church = new mapboxgl.Map({
+    container: 'map_church',
+    style: 'mapbox://styles/vfrico/clx59zpzd00bj01qs5igzhazl',
+    zoom: 17,
+    center: [-3.707370, 40.412993]
+  });
+
+  // map.addControl(new mapboxgl.NavigationControl());
+  map_church.scrollZoom.disable();
+
+  const marker_church = document.createElement('div');
+  marker_church.className = 'marker';
+  marker_church.style.backgroundImage = `url(https://pluspng.com/img-png/church-png-church-icon-1600.png)`;
+  marker_church.style.width = `60px`;
+  marker_church.style.height = `60px`;
+  marker_church.style.backgroundSize = '100%';
+  marker_church.addEventListener('click', () => {
+    window.open('https://maps.app.goo.gl/7ZRTpNv62634bWn1A', '_blank');
+  });
+
+  new mapboxgl.Marker(marker_church)
+    .setLngLat([-3.707370, 40.412993])
+    .addTo(map_church);
+
+
+  //
+  const map_restaurant = new mapboxgl.Map({
+    container: 'map_restaurant',
+    style: 'mapbox://styles/vfrico/clx59zpzd00bj01qs5igzhazl',
+    zoom: 17,
+    center: [-3.781554, 40.519805]
+  });
+
+  // map.addControl(new mapboxgl.NavigationControl());
+  map_restaurant.scrollZoom.disable();
+
+  const marker_restaurant = document.createElement('div');
+  marker_restaurant.className = 'marker';
+  marker_restaurant.style.backgroundImage = `url(https://pluspng.com/img-png/church-png-church-icon-1600.png)`;
+  marker_restaurant.style.width = `60px`;
+  marker_restaurant.style.height = `60px`;
+  marker_restaurant.style.backgroundSize = '100%';
+  marker_restaurant.addEventListener('click', () => {
+    window.open('https://maps.app.goo.gl/EMZEwLuk5o29JhbL9', '_blank');
+  });
+
+  new mapboxgl.Marker(marker_restaurant)
+    .setLngLat([-3.781554, 40.519805])
+    .addTo(map_restaurant);
+
 </script>
 </body>
 </html>
