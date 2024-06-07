@@ -177,6 +177,19 @@ Waypoinsts
   visibility: visible
 }
 
+.header-names {
+  text-align: center;
+  color: $txt-primary;
+}
+
+.header-names-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  border: 1px solid red;
+}
 /* ==========================================================================
 Navigation
 ========================================================================== */
@@ -255,7 +268,7 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 750px;
+  min-height: 500px;
   background: url('../img/hero-min.jpeg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -271,10 +284,10 @@ Hero
   .down-arrow a {
     color: $txt-light;
   }
-  h1 {
-    color: $txt-light;
-    margin-bottom: 40px;
-  }
+  //h1 {
+  //  color: $txt-light;
+  //  margin-bottom: 40px;
+  //}
   p.intro {
     color: $txt-light;
     font-size: 20px;
