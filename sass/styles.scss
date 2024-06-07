@@ -2,12 +2,18 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+
 // Imports
 //@import "compass";
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/colors";
 @import "partials/layout";
+
+@font-face {
+  font-family: "Rastanty Cortez";
+  src: url("../fonts/Rastanty Cortez.ttf");
+}
 
 /* ==========================================================================
 Global Styles
@@ -180,6 +186,19 @@ Waypoinsts
 .header-names {
   text-align: center;
   color: $txt-primary;
+  font-family: "Rastanty Cortez";
+}
+
+@media (max-width: 600px) {
+  .header-names {
+    font-size: 5.5em;
+  }
+}
+
+@media (min-width: 600px) {
+  .header-names {
+    font-size: 10em;
+  }
 }
 
 .header-names-container {
@@ -310,7 +329,7 @@ Hero
 }
 .fixed {
   position: fixed;
-  background-color: rgba(55, 36, 40, .88);
+  background-color: #2a364e;
   z-index: 999;
   width: 100%;
 }
