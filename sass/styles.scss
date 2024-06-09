@@ -764,14 +764,24 @@ Embed video
   height: 350px;
 }
 #video-content {
+
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  padding-top: 100px;
-  position: relative;
+  height: 350px;
+  justify-content: center;
+
+  //width: 100%;
+  //height: 100%;
+  //padding-top: 100px;
+  //position: relative;
   background: rgba(17, 17, 17, 0.5);
-  text-align: center;
+  //text-align: center;
 }
+
 #video-content h5 {
+  text-align: center;
+
   color: #ffffff;
   font-size: 30px;
   font-weight: 300;

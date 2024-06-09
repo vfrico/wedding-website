@@ -287,9 +287,30 @@
         border-radius: 50%;
         cursor: pointer;
         padding: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    .marker-church {
+        background-image: url(https://icon-library.com/images/church-icon-png/church-icon-png-26.jpg);
+        background-size: 100%;
+    }
+
+    .marker-restaurant {
+        background-image: url(https://i.pinimg.com/originals/4e/24/f5/4e24f523182e09376bfe8424d556610a.png);
+        background-size: 100%;
     }
 </style>
 <script>
+  const create_marker_div = (class_extra, link_url) => {
+    const marker_church = document.createElement('div');
+    marker_church.className = 'marker ' + class_extra;
+    marker_church.addEventListener('click', () => {
+      window.open(link_url, '_blank');
+    });
+    return marker_church;
+  };
+
   mapboxgl.accessToken = 'pk.eyJ1IjoidmZyaWNvIiwiYSI6ImNqcTV0Zjl4aDIxbWEzeHBwZ28wc29yNTEifQ.6w494eJOyfIE09VtDG9yhg';
   const map_church = new mapboxgl.Map({
     container: 'map_church',
@@ -301,17 +322,11 @@
   // map.addControl(new mapboxgl.NavigationControl());
   map_church.scrollZoom.disable();
 
-  const marker_church = document.createElement('div');
-  marker_church.className = 'marker';
-  marker_church.style.backgroundImage = `url(https://pluspng.com/img-png/church-png-church-icon-1600.png)`;
-  marker_church.style.width = `60px`;
-  marker_church.style.height = `60px`;
-  marker_church.style.backgroundSize = '100%';
-  marker_church.addEventListener('click', () => {
-    window.open('https://maps.app.goo.gl/7ZRTpNv62634bWn1A', '_blank');
-  });
 
-  new mapboxgl.Marker(marker_church)
+
+
+
+  new mapboxgl.Marker(create_marker_div("marker-church", "https://maps.app.goo.gl/7ZRTpNv62634bWn1A"))
     .setLngLat([-3.707370, 40.412993])
     .addTo(map_church);
 
@@ -320,24 +335,16 @@
   const map_restaurant = new mapboxgl.Map({
     container: 'map_restaurant',
     style: 'mapbox://styles/vfrico/clx59zpzd00bj01qs5igzhazl',
-    zoom: 17,
+    zoom: 15,
     center: [-3.781554, 40.519805]
   });
 
   // map.addControl(new mapboxgl.NavigationControl());
   map_restaurant.scrollZoom.disable();
 
-  const marker_restaurant = document.createElement('div');
-  marker_restaurant.className = 'marker';
-  marker_restaurant.style.backgroundImage = `url(https://pluspng.com/img-png/church-png-church-icon-1600.png)`;
-  marker_restaurant.style.width = `60px`;
-  marker_restaurant.style.height = `60px`;
-  marker_restaurant.style.backgroundSize = '100%';
-  marker_restaurant.addEventListener('click', () => {
-    window.open('https://maps.app.goo.gl/EMZEwLuk5o29JhbL9', '_blank');
-  });
-
-  new mapboxgl.Marker(marker_restaurant)
+  new mapboxgl.Marker(
+        create_marker_div("marker-restaurant", "https://maps.app.goo.gl/EMZEwLuk5o29JhbL9")
+    )
     .setLngLat([-3.781554, 40.519805])
     .addTo(map_restaurant);
 
