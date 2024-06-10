@@ -66,9 +66,9 @@
                     <nav>
                         <ul class="primary-nav">
                             <li><a href="#agenda">Agenda</a></li>
-                            <li><a href="#parroquia">Parroquia</a></li>
-                            <li><a href="#finca" class="login">Finca</a></li>
-                            <li><a href="#regalo" class="login">Regalo</a></li>
+                            <li><a href="#parroquia">Iglesia</a></li>
+                            <li><a href="#finca" class="login">Restaurante</a></li>
+<!--                            <li><a href="#regalo" class="login">Regalo</a></li>-->
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#rsvp" class="btn-white btn-small" onclick="window.location.href = '#rsvp'; return false;">SRC</a></li>
@@ -220,21 +220,31 @@
 <!--</section>-->
 
 
-<!--<section id="comparteFotos" class="section">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-12 text-center">-->
-<!--                <h3 class="header">¡Comparte tus fotos!</h3>-->
-<!--            </div>-->
-<!--            <div class="col-md-12 text-center">-->
-<!--                <p>-->
-<!--                Te agradecemos enormemente si puedes compartir tus fotos de la preboda y la boda en el siguiente enlace de Google Photos. <br>-->
-<!--                </p>-->
-<!--                <p><em><a href="https://photos.app.goo.gl/25a8w95BASsA8kVH7">https://photos.app.goo.gl/25a8w95BASsA8kVH7</a></em></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<section id="comparteFotos" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">¡Comparte tus fotos!</h3>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>
+                    Estamos convencidos de que a lo largo de todo el día habrá
+                    momentos que te encantarán y querrás compartir con nosotros.
+                    Te animamos a que hagas todas las fotos que quieras y que
+                    las compartas con nosotros a través de estos dos enlaces:
+                </p>
+            </div>
+            <div class="col-md-12 text-center" style="padding: 1em 0 3em 0;">
+                <button type="button" class="btn btn-outline-primary btn-lg" style="margin: 0 3em">
+                    <img height="16px" width="16px" src="img/icons/google-photos.png"> Google Photos
+                </button>
+                <button type="button" class="btn btn-outline-primary btn-lg">
+                    <img height="18px" width="18px" src="img/icons/logo_wedshoots.png"> Álbum Wedshots
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="rsvp text-center" id="rsvp" style=" background-color: #f6f6f6">
     <div class="container">
@@ -248,6 +258,46 @@
         </div>
     </div>
 </section>
+
+<section id="informacion-util" class="section" style="padding: 0em 0 0em 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Información útil</h3>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <h4 class="header text-center">Parking cercano</h4>
+                <p>
+                    La iglesia esta dentro de Madrid Central, si el coche que llevais
+                    no tiene etiqueta ECO o O, es necesario meterlo en un parking para
+                    no recibir una recibo de nuestro querido alcalde.
+                </p>
+                <p>
+                    Os dejamos los más cercanos.
+                </p>
+                <p>
+                    <i>
+                        Si el coche NO tiene etiqueta, <b>no puede entrar en la ciudad de Madrid</b>,
+                        tendrías que venir en trasporte público o en taxi.
+                    </i>
+                </p>
+
+                <p>
+                    <div id="map_parking" style="width: 70%; height: 250px; margin: 0 auto;" ></div>
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <h4 class="header text-center">Llegada a la Iglesia y al Pardo</h4>
+                <p>Al ser 12 de octubre, además de nuestra boda, es el día de la fiesta nacional.</p>
+                <p>Es altamente recomendable llegar a la iglesia a través de la M30, por la salida de la calle Segovia o Toledo. Hay que tener en cuenta que la zona del paseo del Prado y Atocha puede estar cortada o atascada por el desfile</p>
+                <p>La llegada al Pardo también puede estar algo atascada, os recomendamos poner Maps para conocer el estado real de las carreteras.</p>
+                <p>¡No desespereis, se podrá llegar y habrá comida para todo el mundo y muchísimo que celebrar!</p>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <footer>
     <div class="container">
@@ -305,6 +355,7 @@
   };
 
   mapboxgl.accessToken = 'pk.eyJ1IjoidmZyaWNvIiwiYSI6ImNqcTV0Zjl4aDIxbWEzeHBwZ28wc29yNTEifQ.6w494eJOyfIE09VtDG9yhg';
+
   const map_church = new mapboxgl.Map({
     container: 'map_church',
     style: 'mapbox://styles/vfrico/clx59zpzd00bj01qs5igzhazl',
@@ -314,8 +365,6 @@
 
   // map.addControl(new mapboxgl.NavigationControl());
   map_church.scrollZoom.disable();
-
-
 
 
 
@@ -340,6 +389,21 @@
     )
     .setLngLat([-3.781554, 40.519805])
     .addTo(map_restaurant);
+
+
+  const map_parking = new mapboxgl.Map({
+    container: 'map_parking',
+    style: 'mapbox://styles/vfrico/clx59zpzd00bj01qs5igzhazl',
+    zoom: 15,
+    center: [-3.707370, 40.412993]
+  });
+  map_parking.scrollZoom.disable();
+  new mapboxgl.Marker(
+    create_marker_div("marker-restaurant", "https://maps.app.goo.gl/EMZEwLuk5o29JhbL9")
+  )
+    .setLngLat([-3.781554, 40.519805])
+    .addTo(map_parking);
+
 
 </script>
 </body>
