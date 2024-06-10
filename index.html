@@ -11,11 +11,11 @@
     <meta property="og:description" content="Nos encantaría invitarte a nuestro gran día.">
     <meta property="og:image" content="img/logowedding.png">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logowedding.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logowedding.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logowedding.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/logo.svg">
+    <link rel="icon" type="image/svg" sizes="32x32" href="img/icons/logo.svg">
+    <link rel="icon" type="image/svg" sizes="16x16" href="img/icons/logo.svg">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="img/logowedding.svg" color="#5bbad5">
+    <link rel="mask-icon" href="img/icons/logo.svg" color="#5bbad5">
 
     <script>
         // load css files from CDN if local node_modules fail
@@ -59,15 +59,19 @@
     <section class="navigation">
         <header>
             <div class="header-content">
-                <div class="logo"><a href="#">
-                    <img src="img/logowedding.png" alt="Logo"></a>
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/icons/logo.svg" alt="Logo">
+                    </a>
                 </div>
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
                             <li><a href="#agenda">Agenda</a></li>
                             <li><a href="#parroquia">Iglesia</a></li>
-                            <li><a href="#finca" class="login">Restaurante</a></li>
+                            <li><a href="#finca">Restaurante</a></li>
+                            <li><a href="#comparteFotos">Fotos</a></li>
+                            <li><a href="#informacion-util">Información útil</a></li>
 <!--                            <li><a href="#regalo" class="login">Regalo</a></li>-->
                         </ul>
                         <ul class="member-actions">
@@ -116,7 +120,7 @@
 <section class="events section-padding" id="agenda">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h3 class="header">Agenda</h3>
             </div>
         </div>
@@ -161,7 +165,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3 class="header" style="padding-bottom: 0;">Real Colegiata de San Isidro<br>
-                    <span style="font-size: 11px;"><em>C. Toledo, 37</em></span>
+                    <span style="font-size: 11px;"><em>C. Toledo, 37</em> <br> Madrid · <a href="https://maps.app.goo.gl/7ZRTpNv62634bWn1A"><i class="bi bi-geo-alt-fill"></i></a></span>
                 </h3>
             </div>
             <div class="col-md-7 text-center"><img src="img/colegiata-recortada.png" style="max-width: 60%; height: auto;" class="wp1"></div>
@@ -179,7 +183,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3 class="header" style="padding-bottom: 0;">Restaurante San Francisco<br>
-                    <span style="font-size: 11px;"><em>Pista del Cristo de El Pardo 3, Fuencarral - El Pardo</em></span>
+                    <span style="font-size: 11px;"><em>Pista del Cristo de El Pardo 3 <br> Fuencarral - El Pardo</em> · <a href="https://maps.app.goo.gl/EMZEwLuk5o29JhbL9"><i class="bi bi-geo-alt-fill"></i></a></span>
                 </h3>
             </div>
             <div class="col-md-7 text-center"><img src="img/san-francisco-recorte.png" style="max-width: 80%; height: auto;" class="wp2"></div>
@@ -235,10 +239,10 @@
                 </p>
             </div>
             <div class="col-md-12 text-center" style="padding: 1em 0 3em 0;">
-                <button type="button" class="btn btn-outline-primary btn-lg" style="margin: 0 3em">
+                <button type="button" class="btn btn-outline-primary btn-lg" style="margin: 0 3em" data-toggle="tooltip" data-placement="top" title="Próximamente">
                     <img height="16px" width="16px" src="img/icons/google-photos.png"> Google Photos
                 </button>
-                <button type="button" class="btn btn-outline-primary btn-lg">
+                <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="tooltip" data-placement="top" title="Próximamente">
                     <img height="18px" width="18px" src="img/icons/logo_wedshoots.png"> Álbum Wedshots
                 </button>
             </div>
@@ -268,7 +272,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <h4 class="header text-center">Parking cercano</h4>
                 <p>
-                    La iglesia esta dentro de Madrid Central, si el coche que llevais
+                    La iglesia está dentro de Madrid Central, si el coche que llevais
                     no tiene etiqueta ECO o O, es necesario meterlo en un parking para
                     no recibir una recibo de nuestro querido alcalde.
                 </p>
@@ -283,7 +287,7 @@
                 </p>
 
                 <p>
-                    <div id="map_parking" style="width: 70%; height: 250px; margin: 0 auto;" ></div>
+                    <div id="map_parking" style="width: 90%; height: 330px; margin: 0 auto;" ></div>
                 </p>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
@@ -304,6 +308,7 @@
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="bi bi-caret-up"></i></a></span>
+                <img src="img/icons/logo-full.svg" width="128px" height="128px" style="padding-bottom: 2em">
                 <p>
                     <strong>ORISTILA&nbsp;&nbsp;&&nbsp;&nbsp;VÍCTOR&nbsp;&nbsp;</strong>
                     <br>
@@ -334,27 +339,52 @@
         height: 45px;
     }
 
+    .marker-btn {
+        width: 45px;
+        height: 45px;
+        background-size: 80%;
+        background-position: center;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-color: wheat;
+    }
+
+    .marker:hover {
+        border: 2px solid blue;
+    }
+
     .marker-church {
-        background-image: url(https://icon-library.com/images/church-icon-png/church-icon-png-26.jpg);
-        background-size: 100%;
+        background-image: url(img/icons/church.png);
+        background-color: wheat;
     }
 
     .marker-restaurant {
-        background-image: url(https://i.pinimg.com/originals/4e/24/f5/4e24f523182e09376bfe8424d556610a.png);
-        background-size: 100%;
+        background-image: url(img/icons/restaurant.png);
+        background-color: #549f9f;
     }
+
+    .marker-parking {
+        background-image: url(img/icons/parking.png);
+        background-color: #7ca2c7;
+    }
+
 </style>
 <script>
-  const create_marker_div = (class_extra, link_url) => {
-    const marker_church = document.createElement('div');
-    marker_church.className = 'marker ' + class_extra;
+  mapboxgl.accessToken = 'pk.eyJ1IjoidmZyaWNvIiwiYSI6ImNqcTV0Zjl4aDIxbWEzeHBwZ28wc29yNTEifQ.6w494eJOyfIE09VtDG9yhg';
+
+  const create_marker_div = (class_extra, link_url, tooltip_text) => {
+    const marker_church = document.createElement('button');
+    // marker_church.className = 'marker ' + class_extra;
+    marker_church.className = 'btn btn-primary marker-btn ' + class_extra;
+    marker_church.type = 'button';
+    marker_church.setAttribute('data-toggle', 'tooltip');
+    marker_church.setAttribute('data-placement', 'top');
+    marker_church.setAttribute('title', tooltip_text);
     marker_church.addEventListener('click', () => {
       window.open(link_url, '_blank');
     });
     return marker_church;
   };
-
-  mapboxgl.accessToken = 'pk.eyJ1IjoidmZyaWNvIiwiYSI6ImNqcTV0Zjl4aDIxbWEzeHBwZ28wc29yNTEifQ.6w494eJOyfIE09VtDG9yhg';
 
   const map_church = new mapboxgl.Map({
     container: 'map_church',
@@ -368,7 +398,7 @@
 
 
 
-  new mapboxgl.Marker(create_marker_div("marker-church", "https://maps.app.goo.gl/7ZRTpNv62634bWn1A"))
+  new mapboxgl.Marker(create_marker_div("marker-church", "https://maps.app.goo.gl/7ZRTpNv62634bWn1A", "Colegiata de San Isidro"))
     .setLngLat([-3.707370, 40.412993])
     .addTo(map_church);
 
@@ -385,7 +415,7 @@
   map_restaurant.scrollZoom.disable();
 
   new mapboxgl.Marker(
-        create_marker_div("marker-restaurant", "https://maps.app.goo.gl/EMZEwLuk5o29JhbL9")
+        create_marker_div("marker-restaurant", "https://maps.app.goo.gl/EMZEwLuk5o29JhbL9", "Restaurante San Francisco")
     )
     .setLngLat([-3.781554, 40.519805])
     .addTo(map_restaurant);
@@ -399,10 +429,25 @@
   });
   map_parking.scrollZoom.disable();
   new mapboxgl.Marker(
-    create_marker_div("marker-restaurant", "https://maps.app.goo.gl/EMZEwLuk5o29JhbL9")
+    create_marker_div("marker-parking", "https://maps.app.goo.gl/wTbsrjq8xaqxAGna9", "Parking Mercado de la Cebada")
   )
-    .setLngLat([-3.781554, 40.519805])
+    .setLngLat([-3.709276, 40.410590])
     .addTo(map_parking);
+  new mapboxgl.Marker(
+    create_marker_div("marker-parking", "https://maps.app.goo.gl/ghYNFEXPBktfWKQB7", "Parking Plaza Mayor")
+  )
+    .setLngLat([-3.707779106310732, 40.41486063647017])
+    .addTo(map_parking);
+  new mapboxgl.Marker(
+    create_marker_div("marker-parking", "https://maps.app.goo.gl/wXRJvfu76bQoXcc3A", "Parking Encomienda 16")
+  )
+    .setLngLat([-3.705968363741327, 40.41075695396946])
+    .addTo(map_parking);
+  new mapboxgl.Marker(create_marker_div("marker-church", "https://maps.app.goo.gl/7ZRTpNv62634bWn1A", "Colegiata de San Isidro"))
+    .setLngLat([-3.707370, 40.412993])
+    .addTo(map_parking);
+
+
 
 
 </script>
