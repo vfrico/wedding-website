@@ -189,15 +189,39 @@ Waypoinsts
   font-family: "Rastanty Cortez";
 }
 
+.engagement-date {
+  padding: 0.2em;
+}
+
+.invitation-text {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
 @media (max-width: 600px) {
   .header-names {
+    font-size: 6em;
+  }
+  .engagement-date {
+    font-size: 4.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-names {
     font-size: 5.5em;
+  }
+  .engagement-date {
+    font-size: 4em;
   }
 }
 
 @media (min-width: 600px) {
   .header-names {
     font-size: 10em;
+  }
+  .engagement-date {
+    font-size: 6em;
   }
 }
 
